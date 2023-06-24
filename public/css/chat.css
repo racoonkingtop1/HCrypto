@@ -1,0 +1,123 @@
+.back {
+    width: 30px;
+}
+
+.chatbox {
+    border-radius: var(--r-container-radius);
+    padding: var(--r-container-padding);
+    height: fit-content;
+}
+
+.chat_head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-elements-primary);
+}
+
+.chat_head img {
+    width: var(--logo-width);
+    height: var(--logo-width);
+    object-fit: cover;
+    border: 1px solid var(--color-elements-primary);
+    border-radius: 100%;
+}
+
+.chat_head a {
+    font-family: var(--c-font);
+    color: #e4e1e1;
+    text-shadow: 0 0 6px #000000;
+    font-size: calc(var(--regular-font-size));
+    text-decoration: none;
+}
+
+/* ! */
+
+.chat_body {
+    height: 500px;
+    padding: 0 20px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    overflow-y: scroll;
+    flex-direction: column;
+}
+
+
+.test::-webkit-scrollbar {
+    width: 2px;
+    margin-left: 1px;
+}
+
+.sent_message {
+    background-color: rgb(17, 189, 123, 0.8);
+    padding: 15px !important;
+    margin: 10px 0;
+    max-width: 60%;
+    border-radius: 10px;
+}
+
+.from_me {
+    border-bottom-right-radius: 0;
+}
+
+.to_me {
+    border-bottom-left-radius: 0;
+}
+
+.sent_message p {
+    font-family: var(--r-font);
+    color: #e4e1e1;
+    text-shadow: 0 0 6px #000000;
+    padding: 0;
+    margin: 0;
+    word-break:keep-all;
+}
+
+.time {
+    display: block;
+    width: 100%;
+    text-align: right;
+    font-family: var(--c-font);
+    font-size: 12px;
+}
+
+/* ! */
+
+.chat_footer {
+    display: flex;
+    align-items: start;
+    width: 100%;
+    padding-top: 10px;
+    margin-top: auto;
+    border-top: 1px solid var(--color-elements-primary);
+}
+
+.message {
+    width: 100%;
+    height: fit-content;
+    resize: none;
+    font-size: calc(var(--regular-font-size));
+    background-color: unset;
+    border: none;
+    border-bottom: 1px solid gray;
+    color: #e4e1e1;
+    text-shadow: 0 0 6px #000000;
+}
+
+.message:focus {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color-elements-primary);
+}
+
+textarea.border-box {
+    box-sizing: border-box;
+  }
+
+.send {
+    width: 30px;
+    margin-left: 10px;
+}

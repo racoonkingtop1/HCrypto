@@ -1,0 +1,162 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_window {
+    width: fit-content;
+    height: fit-content;
+    border-radius: var(--r-container-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login_cont {
+    width: 300px;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px;
+}
+
+input {
+    height: 30px;
+    width: 100%;
+    margin: 0 10px;
+    background-color: unset;
+    border: 1px solid var(--color-elements-primary);
+    text-align: center;
+    font-size: var(--regular-font-size);
+    min-width: 100px;
+    color: var(--color-elements-primary);
+    text-shadow: 0 0 6px #4e4e4e;
+    outline: 1px solid transparent;
+    outline-offset: 1px;
+}
+
+input:focus {
+    outline: 1px solid var(--color-elements-primary);
+}
+
+label {
+    font-family: var(--c-font);
+    color: rgb(228, 225, 225);
+    text-shadow: 0 0 6px #000000;
+    margin: 0;
+    font-size: var(--regular-font-size);
+    text-align: center;
+}
+
+#password {
+    width: 100%;
+}
+
+.policy_checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#policy {
+    width: 7px;
+    height: 7px;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+}
+
+#policy:focus, #policy:active, #policy:hover {
+    border: none;
+    outline: none;
+}
+
+.policy_label {
+    font-size: calc(var(--regular-font-size)/3*2);
+    text-align: left;
+    margin-left: 5px;
+}
+
+.policy_label a {
+    color: unset;
+}
+
+.signin_btn {
+    background-color: unset;
+    border-radius: 10px;
+    color:var(--color-elements-primary);
+    border: 1px solid var(--color-elements-primary);
+    font-size: var(--regular-font-size);
+    font-family: var(--r-font);
+    padding: 0 var(--logo-width);
+    transition: ease-in-out 0.3s;
+    margin-top: 10px;
+}
+
+.signin_btn:hover {
+    background-color: var(--color-elements-primary);
+    color: white;
+    cursor: pointer;
+}
+
+
+
+input[type=checkbox] + label {
+    display: block;
+    margin: 0.2em;
+    cursor: pointer;
+    padding: 0.2em;
+}
+  
+input[type=checkbox] {
+    display: none;
+}
+  
+input[type=checkbox] + label:before {
+    content: "\2714";
+    border: 0.1em solid #ffffff;
+    border-radius: 0.2em;
+    display: inline-block;
+    width: 18px;
+    height: 20px;
+    padding-left: 6px;
+    padding-bottom: 3px;
+    margin-right: 5px;
+    vertical-align: bottom;
+    color: transparent;
+    transition: .2s;
+    text-shadow: none !important;
+}
+  
+input[type=checkbox] + label:active:before {
+    transform: scale(0);
+}
+  
+input[type=checkbox]:checked + label:before {
+    background-color: MediumSeaGreen;
+    border-color: MediumSeaGreen;
+    color: #fff;
+}
+  
+input[type=checkbox]:disabled + label:before {
+    transform: scale(1);
+    border-color: #aaa;
+}
+  
+input[type=checkbox]:checked:disabled + label:before {
+    transform: scale(1);
+    background-color: #bfb;
+    border-color: #bfb;
+}

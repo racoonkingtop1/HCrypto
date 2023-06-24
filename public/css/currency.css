@@ -1,0 +1,225 @@
+.currency {
+    display: flex;
+    align-items: start;
+    border-radius: var(--r-container-radius);
+    padding: var(--r-container-padding);
+    gap: 10px;
+    position: relative;
+}
+
+h2 {
+    font-family: var(--c-font);
+    color: rgb(228, 225, 225);
+    text-shadow: 0 0 6px #000000;
+}
+
+.currency img {
+    height: 400px;
+}
+
+.currency_info {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-wrap: wrap;
+    height: 100%;
+    position: relative;
+    min-height: 400px;
+}
+
+.currency_info h2 {
+    font-size: calc(var(--regular-font-size)*1.5);
+    color: var(--color-elements-primary);
+    text-shadow: 0px 0px 1px rgb(121, 117, 117);
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.currency_info p {
+    font-size: calc(var(--regular-font-size));
+    color: rgb(228, 225, 225);
+    text-shadow: 0 0 4px #000000;
+}
+
+.count {
+    font-size: calc(var(--regular-font-size)/5*4) !important;
+    color: var(--color-elements-primary) !important;
+}
+
+.currency_actions {
+    display: flex;
+    margin: 0;
+    width: 100%;
+    justify-content: end;
+}
+
+.currency_actions button {
+    font-size: var(--regular-font-size);
+    background-color: unset;
+    border-radius: 10px;
+    font-family: var(--r-font);
+    padding: 2px auto;
+    transition: ease-in-out 0.3s;
+    width: 185px;
+}
+
+.buy {
+    color:var(--color-elements-primary);
+    border: 1px solid var(--color-elements-primary);
+    margin-left: calc(var(--logo-width)/2);
+}
+
+.buy:hover {
+    background-color: var(--color-elements-primary);
+    color: white;
+    cursor: pointer;
+}
+
+.buy:active {
+    background-color: #0f9e67;
+}
+
+/*  */
+
+.currency_counter {
+    display: flex;
+    margin: 0;
+    width: 100%;
+    justify-content: end;
+}
+
+.counter {
+    display: flex;
+    height: 27px;
+    border-radius: 8px;
+    overflow: hidden;
+    text-shadow: 0 0 6px #000000
+}
+
+.counter button {
+    border: none;
+    background-color: unset;
+    color: var(--color-elements-primary);
+    min-width: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.counter button:hover {
+    cursor: pointer;
+}
+
+.minus {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border: 1px solid var(--color-elements-primary) !important;
+    border-right: none;
+}
+
+.plus {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border: 1px solid var(--color-elements-primary) !important;
+    border-left: none;
+}
+
+.counter input {
+    width: 30px;
+    border: none;
+    text-align: center;
+    font-size: var(--regular-font-size);
+    font-family: var(--r-font);
+    background-color: unset;
+    color: var(--color-elements-primary);
+    border: 1px solid var(--color-elements-primary) !important;
+
+    padding: 0;
+    margin: 0;
+}
+
+.counter input::-webkit-outer-spin-button,
+.counter input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.sell {
+    color: var(--color-red);
+    border: 1px solid var(--color-red);
+}
+
+.sell:hover {
+    background-color: var(--color-red);
+    color: white;
+    cursor: pointer;
+}
+
+.sell:active {
+    background-color: #b71a1a;
+}
+
+@media (max-width: 1080px) {
+    .currency {
+        flex-wrap: wrap;
+        padding: 40px;
+    }
+
+    .currency_info {
+        min-height: 300px;
+    }
+
+    .currency img {
+        max-width: 100%;
+        margin: 0 auto;
+        max-height: 300px;
+        object-fit: cover;
+        border-bottom: 1px solid var(--color-elements-primary);
+    }
+}
+
+@media (max-width: 540px) {
+    .currency_counter {
+        height: 30px;
+    }
+
+    .currency_buying {
+        justify-content: space-between;
+    }
+    
+    .currency_counter input {
+        width: 30px;
+    }
+    
+    .currency_counter button {
+        width: 25px;
+    }
+    
+    .buy {
+        padding: 0 calc(var(--logo-width)/2);
+    }
+}
+
+@media (max-width: 583px) {
+    .currency_actions {
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+
+    .currency_actions button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .counter {
+        height: 27px;
+    }
+
+    .counter input {
+        font-size: 15px !important;
+    }
+
+    .counter button {
+        font-size: 15px !important;
+    }
+}

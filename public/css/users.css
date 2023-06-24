@@ -1,0 +1,78 @@
+h2 {
+    font-family: var(--c-font);
+    color: rgb(228, 225, 225);
+    text-shadow: 0 0 6px #000000;
+}
+
+.friends, .people {
+    border-radius: var(--r-container-radius);
+    padding: var(--r-container-padding);
+}
+
+.person {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.person:hover {
+    background-color: rgb(0, 0, 0, 0.05);
+}
+
+.person_info {
+    display: flex;
+    align-items: center;
+}
+
+.person_info img {
+    width: var(--logo-width);
+    height: var(--logo-width);
+    object-fit: cover;
+    border-radius: 100%;
+    border: 1px solid var(--color-elements-primary)
+}
+
+.person_naming {
+    margin-left: 10px;
+}
+
+.person_naming a {
+    font-family: var(--c-font);
+    color: var(--color-elements-primary);
+    text-shadow: 0 0 6px #333333;
+    text-decoration: none;
+    margin: 0 5px;
+    font-size: calc(var(--regular-font-size)/4*3);
+}
+
+.person_naming a:hover {
+    text-decoration: underline;
+}
+
+.person_naming p {
+    font-family: var(--r-font);
+    color: rgb(228, 225, 225);
+    text-shadow: 0 0 6px #000000;
+    text-decoration: none;
+    font-size: calc(var(--regular-font-size)*0.5);
+    margin: 0 5px;
+}
+
+.person_btns {
+    display: flex;
+}
+
+.person_btns img {
+    display: flex;
+    align-items: center;
+    width: 25px;
+    border-radius: 14px;
+    padding: 10px;
+}
+
+.person_btns img:hover {
+    cursor: pointer;
+    background-color: rgb(0, 0, 0, 0.15);
+}

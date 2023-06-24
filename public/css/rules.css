@@ -1,0 +1,19 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rules {
+    border-radius: var(--r-container-radius);
+    padding: 20px 40px;
+    max-width: 600px;
+    height: fit-content;
+}
+
+.rules_ul li {
+    font-family: var(--c-font);
+    color: rgb(228, 225, 225);
+    text-shadow: 0 0 6px #000000;
+    font-size: var(--regular-font-size);
+}

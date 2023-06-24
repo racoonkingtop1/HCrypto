@@ -1,0 +1,107 @@
+h2 {
+    font-family: var(--c-font);
+    color: rgb(228, 225, 225);
+    text-shadow: 0 0 6px #000000;
+}
+
+.balance span {
+    color: rgb(198, 194, 194);
+    text-shadow: 0px 0px 1px rgb(121, 117, 117);
+}
+
+.currencies {
+    border-radius: var(--r-container-radius);
+    padding: var(--r-container-padding);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.currency {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 5px 1%;
+    transition: ease-in-out 0.2s;
+    border-radius: 10px;
+}
+
+.currency:hover {
+    background-color: rgb(0, 0, 0, 0.05);
+}
+
+.currency_info {
+    display: flex;
+    align-items: center;
+}
+
+.count {
+    color: var(--color-elements-primary);
+    color: var(--color-elements-primary);
+    text-shadow: 0 0 6px #333333;
+    font-size: calc(var(--regular-font-size)/3*2);
+    font-family: var(--r-font);
+}
+
+.currency_info img {
+    width: var(--logo-width);
+}
+
+.currency_info a {
+    font-family: var(--r-font);
+    margin-left: calc(var(--logo-width)/2);
+    color: rgb(228, 225, 225);
+    text-shadow: 0 0 6px #000000;
+    text-decoration: none;
+    font-size: calc(var(--regular-font-size)/4*3);
+}
+
+.currency_info a:hover {
+    cursor: pointer;
+    color: var(--color-elements-primary);
+}
+
+.currency_price {
+    color: var(--color-elements-primary);
+    color: var(--color-elements-primary);
+    text-shadow: 0 0 6px #333333;
+    font-size: calc(var(--regular-font-size)/3*2);
+    font-family: var(--r-font);
+}
+
+.currency_actions {
+    display: flex;
+    gap: 10px;
+}
+
+.currency_actions button {
+    font-size: calc(var(--regular-font-size)/4*3);
+    font-family: var(--r-font);
+    padding: 5px calc(var(--logo-width)/2);
+    background-color: unset;
+    border-radius: 8px;
+    transition: ease-in-out 0.3s;
+}
+
+.currency_actions button:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.buy_more {
+    border: 1px solid var(--color-elements-primary);
+    color: var(--color-elements-primary);
+}
+
+.buy_more:hover {
+    background-color: var(--color-elements-primary);
+}
+
+.sell {
+    color: var(--color-red);
+    border: 1px solid var(--color-red);
+}
+
+.sell:hover {
+    background-color: var(--color-red);
+}
